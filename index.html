@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <title>Glorious Public School</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="https://gpskelwara.in/img/logo-bg.png">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        #main_dev{
+            margin-top: 120px;
+        }
+        #logo{
+            border:solid #333 2px;
+            border-radius: 120px;
+        }
+        #select-box{
+          width:fit-content;
+        }
+        #select-box label{
+          font-size: 20px;
+        }
+        #select-box select{
+          background-color: #333;
+          color: whitesmoke;
+          width: 100px;
+          border: 3px solid white;
+          border-radius: 7px;  
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">Glorious Public School</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCode1” aria-controls="navbarCode1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCode1">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Classes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="class/nursery.html">Nursery class</a>
+            <a class="dropdown-item" href="class/lkg.html">LKG class</a>
+            <a class="dropdown-item" href="class/hkg.html">HKG class</a>
+            <a class="dropdown-item" href="class/first.html">First class</a>
+            <a class="dropdown-item" href="class/second.html">Second class</a>
+            <a class="dropdown-item" href="class/third.html">Third class</a>
+            <a class="dropdown-item" href="class/fourth.html">Fourth class</a>
+            <a class="dropdown-item" href="class/fifth.html">Fifth class</a>
+            <a class="dropdown-item" href="class/sixth.html">Sixth class</a>
+            <a class="dropdown-item" href="class/seventh.html">Seventh class</a>
+            <a class="dropdown-item" href="class/eighth.html">Eighth class</a>
+          </div>
+        </li>
+     </ul>
+    </div>
+  </nav>
+
+    <center>
+
+        <div id="main_dev">
+        <img id="logo" src="logo-bg.png" alt="logo">
+        <br>
+        <br>
+        <h2>Glorious&nbsp;Public&nbsp;School<sup>
+            Nurs&nbsp;to&nbsp;X
+        </sup></h2>
+        <br>
+         <form id="select-box" action="index.html">
+          <label for="classes">Choose a class: </label>
+          <select name="class" id="classes">
+            <option value="nursery">Nursery</option>
+            <option value="lkg">LKG</option>
+            <option value="hkg">HKG</option>
+            <option value="first">First</option>
+            <option value="second">Second</option>
+            <option value="third">Third</option>
+            <option value="fourth">Fourth</option>
+            <option value="fifth">Fifth</option>
+            <option value="sixth">Sixth</option>
+            <option value="seventh">Seventh</option>
+            <option value="eighth">Eighth</option>
+            <option value="ninth">Ninth</option>
+            <option value="tenth">Tenth</option>
+          </select>
+          <br><br>
+          <input class="btn btn-dark" id="Submit" type="submit" value="Submit">
+        </form>
+    </div>
+      </center>
+    
+    <script>
+      vurl = document.URL;
+      console.log(vurl);
+      if(vurl.includes("?class=")){
+        console.log("yes");
+        var url_string = window.location;
+        var url = new URL(url_string);
+        var name = url.searchParams.get("class");
+        var tvid = url.searchParams.get("id");
+        console.log(name);
+        if(name=="nursery"){
+          window.location = "class/nursery.html"
+        }
+        else if(name=="lkg"){
+          window.location = "class/lkg.html";
+        }
+        else if(name=="hkg"){
+          window.location = "class/hkg.html";
+        }
+        else if(name=="first"){
+          window.location = "class/first.html";
+        }
+        else if(name=="second"){
+          window.location = "class/second.html";
+        }
+        else if(name=="third"){
+          window.location = "class/third.html";
+        }
+        else if(name=="fourth"){
+          window.location = "class/fourth.html";
+        }
+        else if(name=="fifth"){
+          window.location = "class/fifth.html";
+        }
+        else if(name=="sixth"){
+          window.location = "class/sixth.html";
+        }
+        else if(name=="seventh"){
+          window.location = "class/seventh.html";
+        }
+        else if(name=="eighth"){
+          window.location = "class/eighth.html";
+        }
+        else if(name=="ninth"){
+          window.location = "class/ninth.html";
+        }
+        else if(name=="tenth"){
+          window.location = "class/tenth.html";
+        }
+        else{
+          window.location = "error.html";
+        }
+      }
+    </script>
+    </body>
+</html>
